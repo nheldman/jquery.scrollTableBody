@@ -42,8 +42,9 @@
             var $footerTable = $('table.jqstb-footer-table').eq(index);
             
             // Place main table data inside of relevant scrollable div (using jQuery eq() and index)
-            $('div.jqstb-scroll').eq(index).prepend($dataTable);
-            var scrollEl = $('div.jqstb-scroll')[0];
+            var $scrollDiv = $('div.jqstb-scroll').eq(index);
+            $scrollDiv.prepend($dataTable);
+            var scrollEl = $scrollDiv[0];
             
             var hasHorizontalScroll = scrollEl.clientWidth < scrollEl.scrollWidth;
             
@@ -51,8 +52,10 @@
                 var dataTableWidth = $dataTable.outerWidth();
                 $headerTable.width(dataTableWidth);
                 $footerTable.width(dataTableWidth);
+                $scrollDiv.outerWidth(scrollEl.clientWidth);
+                var scrollDivWidth = $scrollDiv.outerWidth();
                 
-                var width = $('div.jqstb-scroll').outerWidth() - scrollBarWidth;
+                var width = scrollDivWidth - scrollBarWidth;
                 
                 var $headerScrollDiv = $('<div style="overflow:hidden;width:' + width + 'px" class="jqstb-header-scroll"></div>');
                 $headerTable.wrap($headerScrollDiv);
@@ -60,7 +63,7 @@
                 var $footerScrollDiv = $('<div style="overflow:hidden;width:' + width + 'px" class="jqstb-footer-scroll"></div>');
                 $footerTable.wrap($footerScrollDiv);
                 
-                $('div.jqstb-scroll').on('scroll', function() {
+                $scrollDiv.on('scroll', function() {
                     $('div.jqstb-header-scroll').scrollLeft($(this).scrollLeft());
                     $('div.jqstb-footer-scroll').scrollLeft($(this).scrollLeft());
                 });
