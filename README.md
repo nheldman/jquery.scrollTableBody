@@ -1,7 +1,7 @@
 Scroll Table Body jQuery Plugin
 ===============================
 
-Scroll Table Body is a cross-browser lightweight jQuery plugin that allows an html table body to scroll while the header and footer stay fixed.  It works with cells that span multiple columns (colspan), and with fixed width or fluid tables, even when you resize!  It supports IE8+, and similarly recent versions of Firefox, Chrome and Safari.
+Scroll Table Body is a cross-browser lightweight jQuery plugin that allows an html table body to scroll while the header and footer stay fixed.  It works with cells that span multiple columns (colspan), horizontal scrolling, and with fixed width or fluid tables, even when you resize!  It supports IE8+, and similarly recent versions of Firefox, Chrome and Safari.
 
 Usage
 -----
