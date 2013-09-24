@@ -3,11 +3,13 @@
         rowsToDisplay: 10
     };
     
+    var scrollBarWidth = 15;
+    
     $.fn.scrollTableBody = function(options) {
         options = $.extend(defaults, options);
         
         var table = this;
-
+        
         wrapTable(table, options);
         alignColumns(table);
 
@@ -38,9 +40,31 @@
             var $dataTable = $(this);
             var $headerTable = $('table.jqstb-header-table').eq(index);
             var $footerTable = $('table.jqstb-footer-table').eq(index);
-
+            
             // Place main table data inside of relevant scrollable div (using jQuery eq() and index)
             $('div.jqstb-scroll').eq(index).prepend($dataTable);
+            var scrollEl = $('div.jqstb-scroll')[0];
+            
+            var hasHorizontalScroll = scrollEl.clientWidth < scrollEl.scrollWidth;
+            
+            if (hasHorizontalScroll) {
+                var dataTableWidth = $dataTable.outerWidth();
+                $headerTable.width(dataTableWidth);
+                $footerTable.width(dataTableWidth);
+                
+                var width = $('div.jqstb-scroll').outerWidth() - scrollBarWidth;
+                
+                var $headerScrollDiv = $('<div style="overflow:hidden;width:' + width + 'px" class="jqstb-header-scroll"></div>');
+                $headerTable.wrap($headerScrollDiv);
+                
+                var $footerScrollDiv = $('<div style="overflow:hidden;width:' + width + 'px" class="jqstb-footer-scroll"></div>');
+                $footerTable.wrap($footerScrollDiv);
+                
+                $('div.jqstb-scroll').on('scroll', function() {
+                    $('div.jqstb-header-scroll').scrollLeft($(this).scrollLeft());
+                    $('div.jqstb-footer-scroll').scrollLeft($(this).scrollLeft());
+                });
+            }
 
             // Force column widths to be set for each header column
             $dataTable.find('thead tr:first th, tbody tr:first td').each(function () {
@@ -71,6 +95,14 @@
 
             // Temporarily show the inner table's header and footer since the dom calculates width based on them being visible
             $dataTable.children('thead, tfoot').show();
+            
+            var scrollEl = $('div.jqstb-scroll')[0];
+            var hasHorizontalScroll = scrollEl.clientWidth < scrollEl.scrollWidth;
+            if (hasHorizontalScroll) {
+                var scrollDivWidth = $('div.jqstb-scroll').outerWidth();
+                $('div.jqstb-header-scroll').outerWidth(scrollDivWidth - scrollBarWidth);
+                $('div.jqstb-footer-scroll').outerWidth(scrollDivWidth - scrollBarWidth);
+            }
             
             // Force column widths to be set for each header column
             var $headerColumns = $headerTable.find('thead tr:first th');
