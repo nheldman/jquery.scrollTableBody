@@ -9,9 +9,6 @@
         options = $.extend(defaults, options);
         
         var table = this;
-        //table.css('width',null);
-        //fixedTableWidth = parseInt(table.css('width'));
-        //console.log(fixedTableWidth + ':' + table.width() + ':' + table.outerWidth());
         
         wrapTable(table, options);
         alignColumns(table);
@@ -29,8 +26,8 @@
         var rowHeight = table.find('tbody tr:first').outerHeight();
         var tableHeight = rowHeight * options.rowsToDisplay;
         
-        var headerTable = $('<table style="width:auto;margin-bottom:0;" class="jqstb-header-table ' + existingClasses + '"><thead><tr><td></td></tr></thead></table>'),
-            footerTable = $('<table style="width:auto;margin-bottom:' + existingMarginBottom + ';" class="jqstb-footer-table ' + existingClasses + '"><tfoot><tr><td></td></tr></tfoot></table>'),
+        var headerTable = $('<table style="table-layout:fixed;width:auto;margin-bottom:0;" class="jqstb-header-table ' + existingClasses + '"><thead><tr><td></td></tr></thead></table>'),
+            footerTable = $('<table style="table-layout:fixed;width:auto;margin-bottom:' + existingMarginBottom + ';" class="jqstb-footer-table ' + existingClasses + '"><tfoot><tr><td></td></tr></tfoot></table>'),
             scrollDiv = '<div class="jqstb-scroll" style="height:' + tableHeight + 'px;overflow-y:auto"></div>';
         
         // Insert the table that will hold the fixed header and footer, and insert the div that will get scrolled
