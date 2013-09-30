@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery.scrollTableBody Demo</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <style type="text/css">
+            body { padding: 20px; }
+            #tableWrapper { width: 800px; }
+        </style>
+    
+        <script src="../lib/jquery-1.10.2.min.js"></script>
+        <script src="../lib/underscore-1.5.2.min.js"></script>
+        <script src="../src/jquery.scrollTableBody-1.0.0.js"></script>
+    </head>
+    
+    <body>
+        <h1>Scroll Table Body jQuery Plugin</h1>
+        
+        <p>Scroll Table Body is a cross-browser lightweight plugin that allows an html table body to scroll while the header and footer stay fixed.  It works with cells that span multiple columns (colspan), with horizontal scrolling, and with fixed width or fluid tables, even when you resize!</p>
+        
+        <h2>Usage</h2>
+        
+        <ol>
+            <li>Load jQuery</li>
+            <li>Optional: load Underscore.js or Lodash.js if you want to debounce when resizing</li>
+            <li>Load the Scroll Table Body plugin</li>
+            <li>Make sure you have a table with proper markup (<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code> if you want it)
+            <li>Call <code>.scrollTableBody()</code> on your table element, which by default displays 10 rows of your table and scrolls the rest</li>
+            <li>Optional: pass <code>rowsToDisplay</code> as an option.  For example, <code>$('table').scrollTableBody({rowsToDisplay:5});</code></li>
+        </ol>
+        
+        <h2>Fixed Width Demo</h2>
+        
+        <p>For best results, wrap the table in a div and apply the fixed width to the wrapping div, as shown below.</p>
+        
+        <p>Or, check out the <a href="horizontal.html">horizontal scroll demo</a> or <a href="index.html">basic scroll demo</a>.</p>
+        
+        <div id="tableWrapper">
+            <table id="arrestedDevelopment" class="table table-striped table-hover table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Relation to Michael</th>
+                        <th>Saying</th>
+                        <th>Net Worth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Michael Bluth</td>
+                        <td>Himself</td>
+                        <td>That was a gimme</td>
+                        <td class="text-right">$1,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>George Bluth</td>
+                        <td>Father</td>
+                        <td>There's always money in the banana stand</td>
+                        <td class="text-right">$10,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>Lucille Bluth</td>
+                        <td>Mother</td>
+                        <td>AAAAAAHHHHHH (for Gene Parmesan)</td>
+                        <td class="text-right">$5,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>GOB Bluth</td>
+                        <td>Older Brother</td>
+                        <td>Illusion, Michael</td>
+                        <td class="text-right">$100.00</td>
+                    </tr>
+                    <tr>
+                        <td>Lindsay Bluth</td>
+                        <td>Twin Sister</td>
+                        <td>Anithing</td>
+                        <td class="text-right">$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Buster Bluth</td>
+                        <td>Younger Brother</td>
+                        <td>I am not a monster!</td>
+                        <td class="text-right">$1,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>George Michael Bluth</td>
+                        <td>Son</td>
+                        <td>Dangerous Cousins</td>
+                        <td class="text-right">$100.00</td>
+                    </tr>
+                    <tr>
+                        <td>Tobias Funke</td>
+                        <td>Brother-in-law</td>
+                        <td>Nevernude</td>
+                        <td class="text-right">$5.00</td>
+                    </tr>
+                    <tr>
+                        <td>Maeby Funke</td>
+                        <td>Daughter-in-law</td>
+                        <td>Marry me!</td>
+                        <td class="text-right">$1,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>Ann Veal</td>
+                        <td>Son's Girlfriend</td>
+                        <td>Her?</td>
+                        <td class="text-right">Priceless</td>
+                    </tr>
+                    <tr>
+                        <td>Lucille Austero</td>
+                        <td>None</td>
+                        <td>My very oldest friend Lucille</td>
+                        <td class="text-right">$10,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>Bob Loblaw</td>
+                        <td>Attorney</td>
+                        <td>Bob Loblaw's Law Blog</td>
+                        <td class="text-right">$500,000.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-right"><strong>Total Net Worth:</strong></td>
+                        <td class="text-right"><strong>$27,500,215.00</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <script type="text/javascript">
+            $(function() {
+                $('#arrestedDevelopment').scrollTableBody();
+            });
+        </script>
+    </body>
+</html>

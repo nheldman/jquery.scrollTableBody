@@ -3,12 +3,15 @@
         rowsToDisplay: 10
     };
     
-    var scrollBarWidth = 15;
+    var scrollBarWidth = 15, fixedTableWidth;
     
     $.fn.scrollTableBody = function(options) {
         options = $.extend(defaults, options);
         
         var table = this;
+        //table.css('width',null);
+        //fixedTableWidth = parseInt(table.css('width'));
+        //console.log(fixedTableWidth + ':' + table.width() + ':' + table.outerWidth());
         
         wrapTable(table, options);
         alignColumns(table);
@@ -47,6 +50,7 @@
             var scrollEl = $scrollDiv[0];
             
             var hasHorizontalScroll = scrollEl.clientWidth < scrollEl.scrollWidth;
+            $scrollDiv.outerWidth(fixedTableWidth + scrollBarWidth + 2);
             
             if (hasHorizontalScroll) {
                 var dataTableWidth = $dataTable.outerWidth();

@@ -6,7 +6,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <style type="text/css">
             body { padding: 20px; }
-            #myTable { width: 800px; }
+            #tableWrapper { width: 800px; }
             #myTable td { white-space: nowrap; }
         </style>
     
@@ -33,202 +33,206 @@
         
         <h2>Horizontal Scroll Demo</h2>
         
-        <p>Back to the <a href="index.html">basic scroll demo</a></p>
+        <p>For best results, wrap the table in a div and apply the fixed width to the wrapping div, as shown below.  In the example below, I am also forcing "nowrap" on the table cells, to demonstrate horizontal scrolling.</p>
         
-        <table id="myTable" class="table table-striped table-hover table-bordered table-condensed">
-            <thead>
-                <tr>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                    <th>Col</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-                <tr>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                    <td>Fairly long content</td>
-                    <td>Short content</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="11" class="text-right"><strong>Total Stuff:</strong></td>
-                    <td class="text-right"><strong>Amazing!</strong></td>
-                </tr>
-            </tfoot>
-        </table>
+        <p>See the <a href="fixed.html">fixed width demo</a>, or go back to the <a href="index.html">basic scroll demo</a>.</p>
+        
+        <div id="tableWrapper">
+            <table id="myTable" class="table table-striped table-hover table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                        <th>Col</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                    <tr>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                        <td>Fairly long content</td>
+                        <td>Short content</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="11" class="text-right"><strong>Total Stuff:</strong></td>
+                        <td class="text-right"><strong>Amazing!</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
         
         <script type="text/javascript">
             $(function() {
