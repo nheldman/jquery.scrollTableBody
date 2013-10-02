@@ -16,4 +16,4 @@ Usage
 Example
 -------
 
-Check the demo folder for an example.
+Check the demo folder for examples.
