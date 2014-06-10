@@ -44,7 +44,7 @@
             // Place main table data inside of relevant scrollable div (using jQuery eq() and index)
             var $scrollDiv = $('div.jqstb-scroll').eq(index);
             $scrollDiv.prepend($dataTable);
-            var scrollEl = $scrollDiv[0];
+            var scrollEl = $scrollDiv;
             
             var hasHorizontalScroll = scrollEl.clientWidth < scrollEl.scrollWidth;
             $scrollDiv.outerWidth(fixedTableWidth + scrollBarWidth + 2);
