@@ -11,7 +11,7 @@ Usage
 3. Load the Scroll Table Body plugin
 4. Make sure you have a table with proper markup (`<thead>`, `<tbody>`, and `<tfoot>` if you want it)
 5. Call `.scrollTableBody()` on your table element, which by default displays 10 rows of your table and scrolls the rest
-6. Optional: pass `rowsToDisplay` as an option.  For example, `$('table').scrollTableBody({rowsToDisplay:5});`
+6. Optional: pass `rowsToDisplay` or `pixelHeight` as an option.  For example, `$('table').scrollTableBody({rowsToDisplay: 5});` or `$('table').scrollTableBody({pixelHeight: 200});`
 
 Example
 -------
