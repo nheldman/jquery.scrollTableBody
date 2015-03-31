@@ -1,0 +1,29 @@
+{
+  "name": "jquery.scrollTableBody",
+  "version": "1.0.1",
+  "homepage": "https://github.com/mikeokner/jquery.scrollTableBody",
+  "authors": [
+    "Michael Okner <mike@mikeokner.com>",
+    "Noah Heldman <noah.heldman@gmail.com>"
+  ],
+  "description": "Easily scroll HTML table bodies while header/footer remain fixed",
+  "main": "src/jquery.scrollTableBody-1.0.1.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "scroll",
+    "table",
+    "body",
+    "jquery",
+    "overflow"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
