@@ -23,7 +23,9 @@
         var existingClasses = table.attr('class');
         var existingMarginBottom = table.css('margin-bottom');
         table.css('margin-bottom', 0);
+
         var tableHeight = 0;
+        var rows = table.find('tbody tr:lt(' + options.rowsToDisplay.toString() + ')');
         $.each(rows, function () {
             tableHeight += $(this).outerHeight();
         });
