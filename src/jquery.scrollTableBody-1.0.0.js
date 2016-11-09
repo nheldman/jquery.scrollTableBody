@@ -23,8 +23,10 @@
         var existingClasses = table.attr('class');
         var existingMarginBottom = table.css('margin-bottom');
         table.css('margin-bottom', 0);
-        var rowHeight = table.find('tbody tr:first').outerHeight();
-        var tableHeight = rowHeight * options.rowsToDisplay;
+        var tableHeight = 0;
+        $.each(rows, function () {
+            tableHeight += $(this).outerHeight();
+        });
         
         var headerTable = $('<table style="table-layout:fixed;width:auto;margin-bottom:0;" class="jqstb-header-table ' + existingClasses + '"><thead><tr><td></td></tr></thead></table>'),
             footerTable = $('<table style="table-layout:fixed;width:auto;margin-bottom:' + existingMarginBottom + ';" class="jqstb-footer-table ' + existingClasses + '"><tfoot><tr><td></td></tr></tfoot></table>'),
